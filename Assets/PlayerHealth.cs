@@ -7,28 +7,28 @@ public class PlayerHealth : MonoBehaviour
 {
     public float MaxHealth = 100;
     private float health;
-    private bool canRecieveDamage = true;
+    private bool canReciveDamage = true;
     public float invincibilityTimer = 2;
 
-    public delegate void HealthChangedHandler(float health, float amountChanged);
+    public delegate void HealthChangedHandler(float newHealth, float amountChanged);
     public event HealthChangedHandler OnHealthChanged;
+
+    public delegate void HealthInitializer(float newHealth);
+    public event HealthInitializer OnHealthInitialized;
 
     void Start()
     {
         health = MaxHealth;
-    }
-    void Update()
-    {
-        
+        OnHealthInitialized?.Invoke(health);
     }
 
     public void AddDamage(float damage)
     {
-        if (canRecieveDamage)
+        if (canReciveDamage)
         {
             health -= damage;
             OnHealthChanged?.Invoke(health, -damage);
-            canRecieveDamage = false;
+            canReciveDamage = false;
             StartCoroutine(InvincibilityTimer(invincibilityTimer, ResetInvincibility));
         }
         Debug.Log(health);
@@ -41,7 +41,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void ResetInvincibility()
     {
-        canRecieveDamage = true;
+        canReciveDamage = true;
         Debug.Log("reset");
     }
     public void AddHealth(float heal)
