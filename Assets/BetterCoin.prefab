@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 5401956305654062292}
   - component: {fileID: 3864232242472008758}
   - component: {fileID: 5220546987749734837}
-  - component: {fileID: 6019555365732745725}
+  - component: {fileID: 4851163377742066267}
   m_Layer: 0
   m_Name: BetterCoin
   m_TagString: Untagged
@@ -541,7 +541,7 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 3775279063496328438}
---- !u!114 &6019555365732745725
+--- !u!114 &4851163377742066267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -550,7 +550,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3775279063496328438}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb20da52559d4364492a4421948c4653, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b60bbc91da090d4da03542e3976edaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   coin: 5

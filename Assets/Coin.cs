@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public float coin = 5;
+    public float coin = 5 ;
     void Start()
     {
         
