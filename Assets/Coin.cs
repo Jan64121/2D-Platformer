@@ -1,15 +1,15 @@
 using UnityEngine;
 
-public class HealthPack : MonoBehaviour
+public class Coin : MonoBehaviour
 {
-    public float heal = 20;
+    public float coin = 5;
     void Start()
     {
-
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.GetComponent<PlayerHealth>().AddHealth(heal);
+        collision.GetComponent<CoinComponent>().AddScore(coin);
         Destroy(gameObject);
     }
 }
