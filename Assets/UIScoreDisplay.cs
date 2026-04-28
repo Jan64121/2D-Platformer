@@ -6,7 +6,7 @@ public class UiScoreDisplay : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public CoinComponent playerScore;
 
-    void Start()
+    void Awake()
     {
         playerScore.OnScoreChanged += OnScoreChanged;
         playerScore.OnScoreInitialized += OnScoreInitialized;

@@ -6,7 +6,7 @@ public class UIHealthDisplay : MonoBehaviour
     public TextMeshProUGUI healthText;
     public PlayerHealth playerHealth;
 
-    void Start()
+    void Awake()
     {
         playerHealth.OnHealthChanged += OnHealthChanged;
         playerHealth.OnHealthInitialized += OnHealthInitialized;

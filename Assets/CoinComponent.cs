@@ -15,10 +15,6 @@ public class CoinComponent : MonoBehaviour
         score = baseScore;
         OnScoreInitialized?.Invoke(score);
     }
-    void Update()
-    {
-        
-    }
     public void AddScore(float coin)
     {
         baseScore += coin;
