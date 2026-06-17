@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc3fed63cbdecf54e9f71c2deb2f3945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Level1
+  sceneName: StartScreen
 --- !u!114 &1333932845
 MonoBehaviour:
   m_ObjectHideFlags: 0
