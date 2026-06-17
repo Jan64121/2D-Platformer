@@ -11,6 +11,8 @@ public class PlayerMotor : MonoBehaviour
     Vector2 direction;
     private new Rigidbody2D rigidbody2D;
 
+    public Animator animator;
+
     public float maxSpeed = 10;
     public float stoppingForce = 5;
     public float speed = 10;
@@ -29,6 +31,7 @@ public class PlayerMotor : MonoBehaviour
     private void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
     private void FixedUpdate()
     {
